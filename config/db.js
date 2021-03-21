@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+//collection.ensureIndex is deprecated. Use createIndexes instead.
+mongoose.set('useCreateIndex', true);
 require('dotenv').config({ path: 'variables.env'});
 
 const conectarDB = async () => {

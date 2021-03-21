@@ -9,18 +9,14 @@ const app = express();
 conectarDB();
 
 // habilitar cors
+//app.use(cors({ credentials: true, origin: true }));
 app.use(cors());
 
 // habilitar express.json
-app.use(express.json({extend: true}));
+app.use(express.json({extended: true}));
 
 // puerto del servidor (app)
 const port = process.env.PORT || 4000;
-
-// ejemplo definir la pagina ppal
-// app.get('/', (req, res) => {
-//     res.send('Hola Mundo')
-// });
 
 // importar rutas
 app.use('/api/usuarios', require('./routes/usuarios'));

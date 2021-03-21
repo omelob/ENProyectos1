@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json({extend: true}));
 
 // puerto del servidor (app)
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 // ejemplo definir la pagina ppal
 // app.get('/', (req, res) => {
@@ -30,6 +30,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 app.use('/api/consumos', require('./routes/consumos'));
 
 // arrancar el servidor (app)
-app.listen(PORT, () => {
-    console.log(`Servidor funcionando en el puerto ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor funcionando en el puerto ${port}`);
 });

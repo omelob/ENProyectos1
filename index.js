@@ -10,7 +10,7 @@ conectarDB();
 
 // habilitar cors
 app.use(cors({ credentials: true, origin: true }));
-app.optiona( "*", cors());
+app.options( "*", cors());
 
 // habilitar express.json
 app.use(express.json({extended: true}));
